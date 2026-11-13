@@ -57,11 +57,11 @@ rules = {'[lu]',  '[luLI]';
             '[luC]', '[luLI]';
            '[bpC]', '[e]'};
 
-ColonModelMale_mergedCompsModel = mergeCompartmentsSena(ColonModelMale, rules);
-ColonModelFemale_mergedCompsModel = mergeCompartmentsSena(ColonModelFemale, rules);
+ColonModelMale_mergedCompsModel = mergeCompartmentsLIEC(ColonModelMale, rules);
+ColonModelFemale_mergedCompsModel = mergeCompartmentsLIEC(ColonModelFemale, rules);
 
-ColonModelMaleupd_mergedCompsModel = mergeCompartmentsSena(ColonModelMaleupd, rules);
-ColonModelFemaleupd_mergedCompsModel = mergeCompartmentsSena(ColonModelFemaleupd, rules);
+ColonModelMaleupd_mergedCompsModel = mergeCompartmentsLIEC(ColonModelMaleupd, rules);
+ColonModelFemaleupd_mergedCompsModel = mergeCompartmentsLIEC(ColonModelFemaleupd, rules);
 
 %Remaining compartments:
 %    {'bc'  }
@@ -78,11 +78,11 @@ ColonModelFemaleupd_mergedCompsModel = mergeCompartmentsSena(ColonModelFemaleupd
 %    {'r'   }
 %    {'x'   }
 
-colonModelMale_withDietFe_mergedCompsModel = mergeCompartmentsSena(colonModelMale_withDietFe, rules);
-colonModelFemale_withDietFe_mergedCompsModel = mergeCompartmentsSena(colonModelFemale_withDietFe, rules);
+colonModelMale_withDietFe_mergedCompsModel = mergeCompartmentsLIEC(colonModelMale_withDietFe, rules);
+colonModelFemale_withDietFe_mergedCompsModel = mergeCompartmentsLIEC(colonModelFemale_withDietFe, rules);
 
-colonModelMale_withDietFeupd_mergedCompsModel = mergeCompartmentsSena(colonModelMale_withDietFeupd, rules);
-colonModelFemale_withDietFeupd_mergedCompsModel = mergeCompartmentsSena(colonModelFemale_withDietFeupd, rules);
+colonModelMale_withDietFeupd_mergedCompsModel = mergeCompartmentsLIEC(colonModelMale_withDietFeupd, rules);
+colonModelFemale_withDietFeupd_mergedCompsModel = mergeCompartmentsLIEC(colonModelFemale_withDietFeupd, rules);
 
 LIECmale = colonModelMale_withDietFeupd_mergedCompsModel;
 LIECfemale = colonModelFemale_withDietFeupd_mergedCompsModel;
@@ -110,7 +110,7 @@ save(fullfile(modelsPath, 'LIECfemale'),'LIECfemale')
 objective   = 'biomass_maintenance';
 
 % Define the name of the current model set (Change this for each run!)
-setName = 'part04_mergeCompartmentsSena';
+setName = 'part04_mergeCompartmentsLIEC';
 timestamp = char(datetime('now', 'Format', 'yyyy-MM-dd_HHmm')); 
 
 % Resulting folder
