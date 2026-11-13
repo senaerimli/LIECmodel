@@ -13,7 +13,7 @@ if isempty(scriptPath)
     scriptPath = matlab.desktop.editor.getActiveFilename;
 end
 
-% Calling fileparts twice steps up from part02_addCompartmentsToColon.m -> MainCodes -> LIEC
+% Calling fileparts twice steps up
 basePath = fileparts(fileparts(scriptPath));
 
 global modelsPath resultsPath 
