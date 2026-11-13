@@ -13,3 +13,6 @@ desktop.ini
 gurobi.lic
 # Large result files: host on Zenodo and link from README
 Results/large/
+   Data/GPL*.txt
+   Data/GSE*_series_matrix.txt
+   Data/IBDMDB/*.biom
