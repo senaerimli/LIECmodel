@@ -1,0 +1,15 @@
+# MATLAB temporary files
+*.asv
+*.autosave
+*.m~
+slprj/
+*.log
+# Windows / Office temporary files
+Thumbs.db
+desktop.ini
+~$*
+# Solver licenses and local paths (never publish)
+*.lic
+gurobi.lic
+# Large result files: host on Zenodo and link from README
+Results/large/
